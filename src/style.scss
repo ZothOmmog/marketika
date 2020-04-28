@@ -221,15 +221,11 @@ body {
 
         &-wrapper-form {
             flex-direction: column;
-            justify-content: center;
+            align-items: center;
             
             &__input {
                 max-width: 375px;
                 margin-bottom: 20px;
-            }
-
-            &-base-button {
-                align-self: center;
             }
         }
     }

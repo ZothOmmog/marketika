@@ -445,12 +445,10 @@ body {
       width: 100%; }
     .section-header-wrapper-form {
       flex-direction: column;
-      justify-content: center; }
+      align-items: center; }
       .section-header-wrapper-form__input {
         max-width: 375px;
-        margin-bottom: 20px; }
-      .section-header-wrapper-form-base-button {
-        align-self: center; } }
+        margin-bottom: 20px; } }
   @media (min-width: 601px) {
     .section-header-wrapper-form__input {
       max-width: 375px;
