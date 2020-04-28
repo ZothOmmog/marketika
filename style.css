@@ -512,8 +512,6 @@ body {
       text-align: center; }
     .section-promo-2 .text-block__describtion {
       text-align: center; }
-    .section-promo-2 .text-block + .text-block {
-      margin-left: 37px; }
   @media (min-width: 751px) {
     .section-promo-1-wrapper-describtion {
       margin-right: 30px; }
@@ -528,10 +526,15 @@ body {
         margin-bottom: 30px; } }
   @media (min-width: 651px) {
     .section-promo-2 .text-block__title {
-      white-space: nowrap; } }
+      white-space: nowrap; }
+    .section-promo-2 .text-block + .text-block {
+      margin-left: 37px; } }
   @media (max-width: 650px) {
     .section-promo-2 {
-      flex-direction: column; }
+      flex-direction: column;
+      align-items: center; }
+      .section-promo-2 .text-block {
+        max-width: 375px; }
       .section-promo-2 .text-block + .text-block {
         margin-top: 30px; } }
 
