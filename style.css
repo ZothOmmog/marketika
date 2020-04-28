@@ -328,31 +328,51 @@ body {
     font-size: 14px;
     line-height: 28px; }
 
-.base-button__get-started button {
+.base-button__button {
   border: none;
   outline: none;
-  background: linear-gradient(90deg, #FE985B 2.77%, #FE4FA7 100%);
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  padding: 16px 45px;
-  border-radius: 4px;
-  color: white; }
-
-.base-button__play button {
-  border: none;
-  outline: none;
-  background: linear-gradient(90deg, #FE985B 2.77%, #FE4FA7 100%);
-  cursor: pointer;
-  width: 85px;
-  height: 85px;
-  border-radius: 50%; }
-  .base-button__play button div {
+  cursor: pointer; }
+  .base-button__button-triangle {
     height: 0;
     width: 0;
     border-left: 12px solid white;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
     margin: 0 auto; }
+  .base-button__button-get-started {
+    font-family: 'Montserrat', sans-serif;
+    padding: 16px 45px;
+    border-radius: 4px; }
+  .base-button__button-play {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%; }
+  .base-button__button_type_gradient {
+    background: linear-gradient(90deg, #FE985B 2.77%, #FE4FA7 100%); }
+  .base-button__button_type_bordered {
+    background-color: white;
+    border: 1px solid #979797;
+    color: #414141; }
+  .base-button__button_type_white {
+    background-color: white;
+    color: #464646; }
+
+.base-nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0; }
+  .base-nav-list__item {
+    color: #464646; }
+    .base-nav-list__item-link {
+      text-decoration: none;
+      color: inherit;
+      font-size: 14px; }
+      .base-nav-list__item-link_with-hover {
+        transition: 0.3s; }
+        .base-nav-list__item-link_with-hover:hover {
+          color: #fe50a6; }
 
 .section-header {
   color: white;
@@ -543,17 +563,14 @@ body {
       line-height: 38px;
       font-size: 16px;
       font-weight: lighter; }
-    .section-plans-main-plan .base-button__get-started {
+    .section-plans-main-plan .base-button {
+      display: block;
       margin-bottom: 67px; }
-      .section-plans-main-plan .base-button__get-started button {
+      .section-plans-main-plan .base-button__button {
         display: block;
         margin: 0 auto; }
     .section-plans-main-plan_type_free {
       background-color: #f6fafd; }
-    .section-plans-main-plan_type_premium .base-button__get-started button {
-      background: white;
-      color: #414141;
-      border: 1px solid #979797; }
 
 .section-free {
   background: linear-gradient(90deg, #FE985B 2.77%, #FE4FA7 100%);
@@ -575,7 +592,7 @@ body {
     margin-bottom: 22px;
     width: 42%;
     margin: 0 auto 42px; }
-  .section-free .base-button__get-started button {
+  .section-free .base-button__button {
     display: block;
     margin: 0 auto;
     background: #fff;
@@ -584,7 +601,7 @@ body {
 .section-footer {
   display: flex;
   justify-content: center;
-  margin-top: 85px !important; }
+  margin: 85px 0 93px !important; }
   .section-footer .section-inner {
     flex-basis: 613px; }
   .section-footer__title {
@@ -593,21 +610,11 @@ body {
     text-align: center;
     margin-bottom: 30px;
     color: #464646; }
-  .section-footer-nav__list {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0; }
-  .section-footer-nav__item a {
-    text-decoration: none;
-    color: #464646;
-    font-size: 14px; }
-  .section-footer-nav_type_main {
+  .section-footer-nav-main {
     margin-bottom: 30px;
     font-weight: bold; }
-  .section-footer-nav_type_icons {
+  .section-footer-nav-icons {
     max-width: 223px;
     margin: 0 auto 23px; }
-  .section-footer-nav_type_sub {
-    margin-bottom: 93px; }
+  .section-footer-nav-sub-list__item-link:hover {
+    border-bottom: 1px solid #464646; }

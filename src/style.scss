@@ -7,12 +7,6 @@
 @mixin font-montserrat {
     font-family: 'Montserrat', sans-serif;
 }
-@mixin base-button {
-    border: none;
-    outline: none;
-    background: linear-gradient(90deg, #FE985B 2.77%, #FE4FA7 100%);
-    cursor: pointer;
-}
 // === / Mixins ===
 
 // === Variables ===
@@ -57,30 +51,75 @@ body {
 }
 
 .base-button {
-    &__get-started {
-        button {
-            @include base-button;
+    &__button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        
+        &-triangle {
+            height: 0;
+            width: 0;
+            border-left: 12px solid white;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            margin: 0 auto;
+        }
+
+        &-get-started {
             @include font-montserrat;
             padding: 16px 45px;
             border-radius: 4px;
-            color: $color-white;
+            
+            
         }
-    }
 
-    &__play {
-        button {
-            @include base-button;
+        &-play {
             width: 85px;
             height: 85px;
             border-radius: 50%;
+        }
 
-            div {
-                height: 0;
-                width: 0;
-                border-left: 12px solid white;
-                border-top: 6px solid transparent;
-                border-bottom: 6px solid transparent;
-                margin: 0 auto;
+        &_type {
+            &_gradient {
+                background: linear-gradient(90deg, #FE985B 2.77%, #FE4FA7 100%);
+            }
+
+            &_bordered {
+                background-color: $color-white;
+                border: 1px solid #979797;
+                color: #414141;
+            }
+
+            &_white {
+                background-color: $color-white;
+                color: #464646;     
+            }
+        }
+    }
+}
+
+.base-nav {
+    &-list {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+
+        &__item {
+            color: #464646;
+            
+            &-link {
+                text-decoration: none;
+                color: inherit;
+                font-size: 14px;
+
+                &_with-hover {
+                    transition: 0.3s;
+                    &:hover {
+                        color: #fe50a6;
+                    }
+                }
             }
         }
     }
@@ -371,31 +410,17 @@ body {
             }
 
             .base-button {
-                &__get-started {
-                    margin-bottom: 67px;
-
-                    button {
-                        display: block;
-                        margin: 0 auto;
-                    }
+                display: block;
+                margin-bottom: 67px;
+                &__button {
+                    display: block;
+                    margin: 0 auto;
                 }
             }
             
             &_type {
                 &_free {
                     background-color: #f6fafd;
-                }
-                
-                &_premium {
-                    .base-button {
-                        &__get-started {
-                            button {
-                                background: $color-white;
-                                color: #414141;
-                                border: 1px solid #979797;
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -432,8 +457,8 @@ body {
         margin: 0 auto 42px;
     }
 
-    .base-button__get-started {
-        button {
+    .base-button {
+        &__button {
             display: block;
             margin: 0 auto;
             background: #fff;
@@ -447,7 +472,7 @@ body {
 .section-footer {
     display: flex;
     justify-content: center;
-    margin-top: 85px !important;
+    margin: 85px 0 93px !important;
 
     .section-inner {
         flex-basis: 613px;
@@ -462,35 +487,21 @@ body {
     }
 
     &-nav {
-        &__list {
-            list-style-type: none;
-            display: flex;
-            justify-content: space-between;
-            padding: 0;
-            margin: 0;
+        &-main {
+            margin-bottom: 30px;
+            font-weight: bold;
         }
         
-        &__item {
-            a {
-                text-decoration: none;
-                color: #464646;
-                font-size: 14px;
-            }
+        &-icons {
+            max-width: 223px;
+            margin: 0 auto 23px;
         }
 
-        &_type {
-            &_main {
-                margin-bottom: 30px;
-                font-weight: bold;
-            }
-            
-            &_icons {
-                max-width: 223px;
-                margin: 0 auto 23px;
-            }
-
-            &_sub {
-                margin-bottom: 93px;
+        &-sub {
+            &-list {
+                &__item-link:hover {
+                    border-bottom: 1px solid #464646;
+                }
             }
         }
     }
