@@ -5,16 +5,17 @@ const browserSync = require('browser-sync').create();
 const style = () => {
     return gulp.src('./src/style.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./public'));
+        .pipe(gulp.dest('./'));
 }
 
 const watch = () => {
     browserSync.init({
-        server: { baseDir: './public' }
+        server: { baseDir: './' }
     });
 
     gulp.watch('./src/style.scss', style);
-    gulp.watch("./public/*.*").on('change', browserSync.reload);
+    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./*.css").on('change', browserSync.reload);
 }
 
 exports.style = style;
