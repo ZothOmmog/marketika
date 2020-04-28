@@ -583,7 +583,8 @@ body {
 
 .section-footer {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 85px !important; }
   .section-footer .section-inner {
     flex-basis: 613px; }
   .section-footer__title {
